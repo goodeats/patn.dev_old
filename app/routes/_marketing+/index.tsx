@@ -5,10 +5,8 @@ import {
 } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
 import { HomeWrapper } from '#app/components/layout'
-import { LogoGrid } from '#app/components/templates'
 import { prisma } from '#app/utils/db.server.ts'
 import { getUserImgSrc } from '#app/utils/misc.tsx'
-import { logos } from './logos/logos.ts'
 
 export const meta: MetaFunction = () => [{ title: 'Pat Needham' }]
 
@@ -70,11 +68,12 @@ export default function Index() {
 					Check out the{' '}
 					<a
 						className="underline hover:no-underline"
-						href="https://github.com/goodeats/patn.dev"
+						href="https://github.com/goodeats/patn.dev_old"
 					>
 						GitHub Repo
 					</a>{' '}
-					for my portfolio site while it is actively under construction! 🚧
+					for my portfolio site which I plan on updating after I am finished
+					with my current project.
 				</p>
 				<p
 					data-paragraph
@@ -87,7 +86,7 @@ export default function Index() {
 					>
 						Generative Art
 					</a>{' '}
-					project that I am currently working on! 🎨🔺
+					project that I have been working on! 🎨🔺
 				</p>
 			</>
 		)
@@ -106,7 +105,6 @@ export default function Index() {
 					<Heading />
 					<CallToAction />
 				</div>
-				<LogoGrid logos={logos} />
 			</div>
 		</HomeWrapper>
 	)
